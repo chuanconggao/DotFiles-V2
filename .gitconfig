@@ -1,0 +1,42 @@
+[credential]
+	helper = osxkeychain
+
+[core]
+	editor = code --wait --new-window
+	excludesfile = ~/.gitignore_global
+
+[diff]
+	tool = vscode-diff
+
+[difftool]
+	prompt = false
+
+[difftool "vscode-diff"]
+	cmd = code --wait --new-window --diff $LOCAL $REMOTE
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[interactive]
+	diffFilter = diff-highlight
+
+[merge]
+	tool = vscode-merge
+
+[mergetool "vscode-merge"]
+	cmd = code --wait --new-window $MERGED
+
+[pager]
+	diff = diff-highlight | less
+	log = diff-highlight | less
+	show = diff-highlight | less
+
+[pull]
+	rebase = true
+
+[user]
+	name = Chuancong Gao
+	email = chuanconggao@users.noreply.github.com
