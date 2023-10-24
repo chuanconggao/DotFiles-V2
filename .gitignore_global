@@ -6,3 +6,5 @@
 *.un~
 
 __pycache__
+
+.envrc
