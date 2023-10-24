@@ -44,6 +44,12 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source /opt/homebrew/opt/zsh-git-prompt/zshrc.sh
 PROMPT='%F{blue}%B%~%b%f %# '
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[yellow]%}%{✚%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[white]%}%{✔%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{✖%G%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}%{●%G%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}%{…%G%}"
 RPROMPT='$(git_super_status)'
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
