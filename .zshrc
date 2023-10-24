@@ -45,6 +45,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/opt/zsh-git-prompt/zshrc.sh
 PROMPT='%F{blue}%B%~%b%f %# '
 RPROMPT='$(git_super_status)'
+export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export EDITOR="code"
 
