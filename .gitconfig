@@ -4,6 +4,8 @@
 [core]
 	editor = code --wait --new-window
 	excludesfile = ~/.gitignore_global
+	fsmonitor = true
+	ignoreCase = true
 
 [diff]
 	tool = vscode-diff
@@ -19,6 +21,12 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[fetch]
+	prune = true
+
+[grep]
+	patternType = perl
 
 [interactive]
 	diffFilter = diff-highlight
