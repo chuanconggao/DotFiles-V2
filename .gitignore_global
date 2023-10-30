@@ -8,3 +8,5 @@
 __pycache__
 
 .envrc
+
+cov.xml
