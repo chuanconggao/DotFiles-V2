@@ -1,0 +1,4 @@
+cpus: 2
+memory: 1GiB
+vmType: vz
+rosetta: true
