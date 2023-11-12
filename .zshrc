@@ -74,6 +74,8 @@ alias ll="ls -l"
 alias ls="ls --color=auto -h"
 alias rsync="rsync -h"
 
+alias mkdir="mkdir -p"
+
 alias python="python3"
 
 alias ql="qlmanage -p > /dev/null 2> /dev/null"
