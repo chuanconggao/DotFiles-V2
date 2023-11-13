@@ -76,6 +76,8 @@ alias rsync="rsync -h"
 
 alias mkdir="mkdir -p"
 
+alias echo="echo -e"
+
 alias python="python3"
 
 alias ql="qlmanage -p > /dev/null 2> /dev/null"
