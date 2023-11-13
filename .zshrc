@@ -54,6 +54,8 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}%{…%G%}"
 RPROMPT='$(git_super_status)'
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
+export HOMEBREW_NO_ENV_HINTS="true"
+
 export EDITOR="code"
 
 eval "$(direnv hook zsh)"
