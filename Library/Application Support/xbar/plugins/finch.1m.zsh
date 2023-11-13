@@ -18,3 +18,8 @@ echo "Finch | color=$COLOR"
 echo "---"
 
 echo "$STATUS"
+
+echo "---"
+
+echo "Start | shell=zsh param1=~/.xbar/plugins/scripts/finch.start.zsh terminal=true"
+echo "Stop | shell=zsh param1=~/.xbar/plugins/scripts/finch.stop.zsh terminal=true"
