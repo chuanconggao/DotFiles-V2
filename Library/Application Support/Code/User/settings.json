@@ -1,0 +1,149 @@
+{
+    "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
+    "aws.experiments": {
+        "jsonResourceModification": true
+    },
+    "aws.samcli.enableCodeLenses": true,
+    "aws.telemetry": false,
+
+    "coverage-gutters.showLineCoverage": true,
+    "coverage-gutters.showGutterCoverage": false,
+
+    "debug.internalConsoleOptions": "openOnSessionStart",
+    "debug.openDebug": "openOnSessionStart",
+
+    "diffEditor.codeLens": true,
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+
+    "editor.accessibilitySupport": "off",
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "editor.autoClosingComments": "beforeWhitespace",
+    "editor.autoClosingQuotes": "beforeWhitespace",
+    "editor.experimental.asyncTokenization": true,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.guides.bracketPairs": "active",
+    "editor.linkedEditing": true,
+    "editor.mouseWheelZoom": true,
+    "editor.renderWhitespace": "trailing",
+    "editor.rulers": [
+        100,
+    ],
+    "editor.suggest.preview": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "explorer.confirmDelete": false,
+
+    "explorer.confirmDragAndDrop": false,
+    "explorer.excludeGitIgnore": true,
+
+    "files.autoGuessEncoding": true,
+    "files.autoSave": "onWindowChange",
+    "files.insertFinalNewline": true,
+
+    "flake8.args": [
+        "--max-line-length=100",
+    ],
+
+    "git.openRepositoryInParentFolders": "always",
+    "git.pruneOnFetch": true,
+
+    "notebook.lineNumbers": "on",
+
+    "pylint.lintOnChange": true,
+
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.importFormat": "relative",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.persistAllIndices": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.experiments.optInto": [
+        "pythonTestAdapter",
+    ],
+    "python.testing.pytestArgs": [
+        "--color=yes",
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": true,
+
+    "redhat.telemetry.enabled": false,
+
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useParentIgnoreFiles": true,
+
+    "shellcheck.customArgs": [
+        "--shell=bash",
+    ],
+    "shellcheck.ignorePatterns": {
+        "**/*.zsh": false,
+    },
+
+    "telemetry.telemetryLevel": "off",
+
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.enableBell": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.shellIntegration.history": 1000,
+
+    "update.mode": "none",
+
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    "vim.showMarksInGutter": true,
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+
+    "window.restoreFullscreen": true,
+
+    "workbench.commandPalette.experimental.suggestCommands": true,
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editorLargeFileConfirmation": 128,
+    "workbench.startupEditor": "none",
+
+    "xml.codeLens.enabled": true,
+
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence",
+    ],
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+}
+
