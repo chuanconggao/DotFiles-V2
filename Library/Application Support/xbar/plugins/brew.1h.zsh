@@ -25,5 +25,5 @@ if [[ $OUTDATED_NUM -gt 0 ]]; then
 
     echo "---"
 
-    echo "Upgrade | shell=zsh param1=~/.xbar/plugins/scripts/brew.upgrade.zsh terminal=true"
+    echo "Upgrade... | shell=zsh param1=~/.xbar/plugins/scripts/brew.upgrade.zsh terminal=true"
 fi
