@@ -3,7 +3,6 @@
     "aws.experiments": {
         "jsonResourceModification": true
     },
-    "aws.samcli.enableCodeLenses": true,
     "aws.telemetry": false,
 
     "coverage-gutters.showLineCoverage": true,
