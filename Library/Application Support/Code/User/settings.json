@@ -47,6 +47,9 @@
         "--max-line-length=100",
     ],
 
+    "git-graph.commitDetailsView.fileView.type": "File List",
+    "git-graph.repository.fetchAndPrune": true,
+
     "git.openRepositoryInParentFolders": "always",
     "git.pruneOnFetch": true,
 
