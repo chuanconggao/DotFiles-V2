@@ -1,3 +1,6 @@
+[alias]
+	graph = log --all --decorate --oneline --graph
+
 [credential]
 	helper = osxkeychain
 
