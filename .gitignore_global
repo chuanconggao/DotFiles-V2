@@ -5,8 +5,11 @@
 *.tmp
 *.un~
 
-__pycache__
+*.egg-info/
+.mypy_cache/
+__pycache__/
 
 .envrc
 
+htmlcov/
 cov.xml
