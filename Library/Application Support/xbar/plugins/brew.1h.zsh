@@ -10,8 +10,10 @@ OUTDATED_NUM=$(echo -n "$OUTDATED" | grep -c "")
 
 if [[ $OUTDATED_NUM -gt 0 ]]; then
     echo "brew: $OUTDATED_NUM | color=yellow"
+
+    terminal-notifier -title "Homebrew" -message "$OUTDATED_NUM available update(s)."
 else
-    echo "brew: $OUTDATED_NUM"
+    echo "brew"
 fi
 
 echo "---"
