@@ -11,5 +11,8 @@ __pycache__/
 
 .envrc
 
+.coverage
 htmlcov/
 cov.xml
+
+dist/
