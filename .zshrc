@@ -43,7 +43,20 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-PROMPT='%F{blue}%B%~%b%f %# '
+setopt PROMPT_SUBST
+
+function git_prompt_precmd() {
+    RAW_GIT_PROMPT="$(print_git_prompt)"
+    if [[ -z $RAW_GIT_PROMPT ]]; then
+        GIT_PROMPT=""
+    else
+        GIT_PROMPT=" ($RAW_GIT_PROMPT)"
+    fi
+}
+autoload -U add-zsh-hook
+add-zsh-hook precmd git_prompt_precmd
+
+PROMPT='%F{blue}%B%~%b%f${GIT_PROMPT} %# '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS="true"
