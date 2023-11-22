@@ -9,3 +9,6 @@ PATH="/opt/homebrew/opt/gnu-time/libexec/gnubin:$PATH"
 PATH="/opt/homebrew/opt/gnu-which/libexec/gnubin:$PATH"
 PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+
+# For scripts installed by pipx
+PATH="$HOME/.local/bin:$PATH"
