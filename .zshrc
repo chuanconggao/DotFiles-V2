@@ -56,7 +56,7 @@ function git_prompt_precmd() {
 autoload -U add-zsh-hook
 add-zsh-hook precmd git_prompt_precmd
 
-PROMPT='%F{blue}%B%~%b%f${GIT_PROMPT} %# '
+PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}\n└ %# '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS="true"
