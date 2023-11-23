@@ -101,6 +101,12 @@
 
     "vim.highlightedyank.enable": true,
     "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["<C-l>"],
+          "commands": [":nohl"]
+        },
+      ],
     "vim.showMarksInGutter": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
