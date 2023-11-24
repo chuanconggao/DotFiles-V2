@@ -3,37 +3,56 @@
 source /etc/zprofile
 source ~/.zprofile
 
-OPEN_PORTS=$(lsof +c 100 -n -P -iTCP -sTCP:LISTEN | tail -n +2 | awk '{print $9,$1}' | grep -v -P '\b127.0.0.1:' | sed 's/^*://' | sort -n -u)
+OPEN_PORTS=$(lsof +c 100 -P -iTCP -sTCP:LISTEN | tail -n +2 | awk '{print $9,$1}' | sed 's/^*://' | sort -n | uniq)
 OPEN_PORTS_NUM=$(echo -n "$OPEN_PORTS" | grep -c "")
 
 # - 631 for internet printing protocol
 # - 5000 for universal plug-and-play
 # - 7000 for AirPlay receiver
 MACOS_PORTS_REGEX="^(?:[57]000 ControlCenter|[0-9]+ rapportd)$"
-OTHERS_OPEN_PORTS_NUM=$(echo -n "$OPEN_PORTS" | grep -c -v -P "$MACOS_PORTS_REGEX")
+LOCAL_PORTS_REGEX="^localhost:"
 
-if [[ $OTHERS_OPEN_PORTS_NUM -gt 0 ]]; then
-    echo "Ports: $OPEN_PORTS_NUM | color=yellow"
+MACOS_OPEN_PORTS=$(echo -n "$OPEN_PORTS" | grep -P "$MACOS_PORTS_REGEX")
+MACOS_OPEN_PORTS_NUM=$(echo -n "$MACOS_OPEN_PORTS" | grep -c "")
+
+OTHERS_NONLOCAL_OPEN_PORTS=$(echo -n "$OPEN_PORTS" | grep -v -P "$MACOS_PORTS_REGEX" | grep -v -P "$LOCAL_PORTS_REGEX")
+OTHERS_NONLOCAL_OPEN_PORTS_NUM=$(echo -n "$OTHERS_NONLOCAL_OPEN_PORTS" | grep -c "")
+
+OTHERS_LOCAL_OPEN_PORTS=$(echo -n "$OPEN_PORTS" | grep -v -P "$MACOS_PORTS_REGEX" | grep -P "$LOCAL_PORTS_REGEX")
+OTHERS_LOCAL_OPEN_PORTS_NUM=$(echo -n "$OTHERS_LOCAL_OPEN_PORTS" | grep -c "")
+
+if [[ $OTHERS_NONLOCAL_OPEN_PORTS_NUM -gt 0 ]]; then
+    echo "Ports: $OTHERS_NONLOCAL_OPEN_PORTS_NUM | color=yellow"
 else
-    echo "Ports: $OPEN_PORTS_NUM"
+    echo "Ports"
 fi
 
-echo "---"
+if [[ $MACOS_OPEN_PORTS_NUM -gt 0 ]]; then
+    echo "---"
 
-echo "By macOS"
+    echo "By macOS"
 
-echo "---"
+    echo "---"
 
-echo -n "$OPEN_PORTS" | grep -P "$MACOS_PORTS_REGEX"
+    echo "$MACOS_OPEN_PORTS"
+fi
 
-echo "---"
+if [[ $OTHERS_LOCAL_OPEN_PORTS_NUM -gt 0 ]]; then
+    echo "---"
 
-if [[ $OTHERS_OPEN_PORTS_NUM -gt 0 ]]; then
+    echo "By Others (Local)"
+
+    echo "---"
+
+    echo "$OTHERS_LOCAL_OPEN_PORTS" 
+fi
+
+if [[ $OTHERS_NONLOCAL_OPEN_PORTS_NUM -gt 0 ]]; then
+    echo "---"
+
     echo "By Others | color=yellow"
 
     echo "---"
 
-    echo -n "$OPEN_PORTS" | grep -v -P "$MACOS_PORTS_REGEX"
-
-    echo "---"
+    echo "$OTHERS_NONLOCAL_OPEN_PORTS" 
 fi
