@@ -38,6 +38,9 @@ setopt MULTIOS
 
 autoload -U zmv
 
+# In default, when pressing <Ctrl-u>, Zsh clears entire line instead of line before cursor.
+bindkey \^U backward-kill-line
+
 # Must be before auto suggestions for its proper highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
