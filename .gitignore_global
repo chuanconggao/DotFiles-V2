@@ -16,3 +16,5 @@ htmlcov/
 cov.xml
 
 dist/
+
+node_modules/
