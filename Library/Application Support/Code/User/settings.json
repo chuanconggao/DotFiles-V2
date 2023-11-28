@@ -34,14 +34,26 @@
     "editor.suggest.preview": true,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 100,
-    "explorer.confirmDelete": false,
 
+    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.excludeGitIgnore": true,
 
     "files.autoGuessEncoding": true,
     "files.autoSave": "onWindowChange",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/build": true,
+        "**/dist": true,
+        "**/htmlcov": true,
+    },
     "files.insertFinalNewline": true,
+    "files.watcherExclude": {
+        "**/__pycache__/**": true,
+        "**/build/**": true,
+        "**/dist/**": true,
+        "**/htmlcov/**": true,
+    },
 
     "flake8.args": [
         "--max-line-length=100",
@@ -77,6 +89,12 @@
 
     "redhat.telemetry.enabled": false,
 
+    "search.exclude": {
+        "**/__pycache__": true,
+        "**/build": true,
+        "**/dist": true,
+        "**/htmlcov": true,
+    },
     "search.showLineNumbers": true,
     "search.smartCase": true,
     "search.useGlobalIgnoreFiles": true,
@@ -154,4 +172,3 @@
         "editor.defaultFormatter": "ms-python.black-formatter",
     },
 }
-
