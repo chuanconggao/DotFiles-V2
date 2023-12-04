@@ -30,7 +30,7 @@ unsetopt CASE_MATCH
 unsetopt LIST_TYPES
 unsetopt MARK_DIRS
 
-WORDCHARS=$(echo $WORDCHARS | tr -d "/")
+WORDCHARS=$(echo $WORDCHARS | tr -d "/-")
 
 setopt AUTO_CD
 
