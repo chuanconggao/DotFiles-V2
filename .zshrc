@@ -49,7 +49,19 @@ source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-se
 setopt PROMPT_SUBST
 
 function git_prompt_precmd() {
-    RAW_GIT_PROMPT="$(print_git_prompt)"
+    if [[ $LAST_PWD == $PWD ]]; then
+        CURRENT_TIME="$(date +%s)"
+        if [[ $LAST_GIT_PROMPT_TIME == $CURRENT_TIME ]]; then
+            return
+        fi
+
+        LAST_GIT_PROMPT_TIME=$CURRENT_TIME
+    else
+        LAST_GIT_PROMPT_TIME=""
+        LAST_PWD=$PWD
+    fi
+
+    RAW_GIT_PROMPT="$(print_git_prompt 2> /dev/null)"
     if [[ -z $RAW_GIT_PROMPT ]]; then
         GIT_PROMPT=""
     else
