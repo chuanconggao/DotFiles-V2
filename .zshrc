@@ -99,5 +99,6 @@ alias mkdir="mkdir -p"
 alias echo="echo -e"
 
 alias python="python3"
+alias ipython="ipython --no-confirm-exit"
 
 alias ql="qlmanage -p > /dev/null 2> /dev/null"
