@@ -76,6 +76,10 @@ export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS="true"
 
+export HOMEBREW_NO_ANALYTICS=1
+
+export DDB_LOCAL_TELEMETRY=0
+
 export EDITOR="code"
 
 eval "$(direnv hook zsh)"
