@@ -1,3 +1,6 @@
+autoload -U bashcompinit
+bashcompinit
+
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
@@ -84,6 +87,9 @@ export EDITOR="code"
 
 eval "$(direnv hook zsh)"
 eval "$(npm completion)"
+eval "$(register-python-argcomplete pipx)"
+complete -C '/opt/homebrew/bin/aws_completer' aws
+complete -C '/opt/homebrew/bin/aws_completer' awslocal
 
 export AWS_CLI_AUTO_PROMPT="on-partial"
 
