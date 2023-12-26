@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-brew upgrade --greedy
+brew upgrade --greedy && open -g "swiftbar://refreshplugin?name=brew"

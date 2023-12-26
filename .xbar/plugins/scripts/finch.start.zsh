@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-finch vm start
+finch vm start && open -g "swiftbar://refreshplugin?name=finch"
