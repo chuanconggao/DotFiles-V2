@@ -18,4 +18,4 @@ echo "Mem: $MEMORY_PRESSURE% | color=$COLOR"
 
 echo "---"
 
-echo "Activity Monitor... | shell=open param1=-a param2=\"Activity Monitor.app\""
+echo "Activity Monitor... | shell=open param1=-a param2=\"Activity Monitor.app\" terminal=false"
