@@ -9,11 +9,11 @@ OUTDATED=$(brew outdated --verbose --greedy)
 OUTDATED_NUM=$(echo -n "$OUTDATED" | grep -c "")
 
 if [[ $OUTDATED_NUM -gt 0 ]]; then
-    echo "brew: $OUTDATED_NUM | color=yellow"
+    echo ":mug:: $OUTDATED_NUM | color=yellow sfcolor=yellow sfsize=18"
 
     terminal-notifier -title "Homebrew" -message "$OUTDATED_NUM available update(s)." -group "xbar/brew" > /dev/null
 else
-    echo "brew"
+    echo ":mug: | sfsize=18"
 fi
 
 echo "---"

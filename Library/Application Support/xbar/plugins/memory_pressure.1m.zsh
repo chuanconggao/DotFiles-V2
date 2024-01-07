@@ -14,7 +14,7 @@ else
     COLOR="red"
 fi
 
-echo "Mem: $MEMORY_PRESSURE% | color=$COLOR"
+echo ":memorychip:: $MEMORY_PRESSURE% | color=$COLOR sfcolor=$COLOR sfsize=18"
 
 echo "---"
 

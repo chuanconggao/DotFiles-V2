@@ -22,9 +22,9 @@ OTHERS_LOCAL_OPEN_PORTS=$(echo -n "$OPEN_PORTS" | grep -v -P "$MACOS_PORTS_REGEX
 OTHERS_LOCAL_OPEN_PORTS_NUM=$(echo -n "$OTHERS_LOCAL_OPEN_PORTS" | grep -c "")
 
 if [[ $OTHERS_NONLOCAL_OPEN_PORTS_NUM -gt 0 ]]; then
-    echo "Ports: $OTHERS_NONLOCAL_OPEN_PORTS_NUM | color=yellow"
+    echo ":firewall:: $OTHERS_NONLOCAL_OPEN_PORTS_NUM | color=yellow sfcolor=yellow sfsize=18"
 else
-    echo "Ports"
+    echo ":firewall: | sfsize=18"
 fi
 
 if [[ $MACOS_OPEN_PORTS_NUM -gt 0 ]]; then
