@@ -43,6 +43,7 @@
 
     "files.autoGuessEncoding": true,
     "files.autoSave": "onWindowChange",
+    "files.autoSaveWhenNoErrors": true,
     "files.exclude": {
         "**/__pycache__": true,
         "**/build": true,
@@ -67,8 +68,11 @@
     "git.openRepositoryInParentFolders": "always",
     "git.pruneOnFetch": true,
 
+    "githubPullRequests.focusedMode": "multiDiff",
+
     "markdown.occurrencesHighlight.enabled": true,
 
+    "notebook.experimental.variablesView": true,
     "notebook.lineNumbers": "on",
     "notebook.stickyScroll.enabled": true,
 
@@ -122,6 +126,7 @@
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.hideOnStartup": "whenEmpty",
     "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.mouseWheelZoom": true,
     "terminal.integrated.shellIntegration.history": 1000,
     "terminal.integrated.stickyScroll.enabled": true,
 
