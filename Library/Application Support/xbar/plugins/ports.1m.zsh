@@ -9,7 +9,7 @@ OPEN_PORTS_NUM=$(echo -n "$OPEN_PORTS" | grep -c "")
 # - 631 for internet printing protocol
 # - 5000 for universal plug-and-play
 # - 7000 for AirPlay receiver
-MACOS_PORTS_REGEX="^(?:[57]000 ControlCenter|[0-9]+ rapportd)$"
+MACOS_PORTS_REGEX="^(?:[57]000 ControlCenter|[0-9]+ rapportd|[0-9]+ sharingd)$"
 LOCAL_PORTS_REGEX="^localhost:"
 
 MACOS_OPEN_PORTS=$(echo -n "$OPEN_PORTS" | grep -P "$MACOS_PORTS_REGEX")
