@@ -92,9 +92,12 @@
     ],
     "python.testing.pytestArgs": [
         "--color=yes",
+        "--capture=no",
+        "--verbose"
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": true,
+    "python.REPL.sendToNativeREPL": true,
 
     "redhat.telemetry.enabled": false,
 
