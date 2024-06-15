@@ -81,7 +81,7 @@
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.importFormat": "relative",
-    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": true,
@@ -142,7 +142,7 @@
           "before": ["<C-l>"],
           "commands": [":nohl"]
         },
-      ],
+    ],
     "vim.showMarksInGutter": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
