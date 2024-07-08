@@ -65,6 +65,7 @@
     "git-graph.commitDetailsView.fileView.type": "File List",
     "git-graph.repository.fetchAndPrune": true,
 
+    "git.confirmSync": false,
     "git.openRepositoryInParentFolders": "always",
     "git.pruneOnFetch": true,
 
@@ -132,6 +133,8 @@
     "terminal.integrated.mouseWheelZoom": true,
     "terminal.integrated.shellIntegration.history": 1000,
     "terminal.integrated.stickyScroll.enabled": true,
+
+    "scm.experimental.showHistoryGraph": true,
 
     "update.mode": "none",
 
