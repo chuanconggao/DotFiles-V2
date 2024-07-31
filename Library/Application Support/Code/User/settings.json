@@ -88,6 +88,7 @@
     "python.analysis.inlayHints.variableTypes": true,
     "python.analysis.persistAllIndices": true,
     "python.analysis.typeCheckingMode": "strict",
+    "python.diagnostics.sourceMapsEnabled": true,
     "python.experiments.optInto": [
         "pythonTestAdapter",
     ],
