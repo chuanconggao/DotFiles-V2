@@ -13,7 +13,10 @@
 
     "diffEditor.codeLens": true,
     "diffEditor.experimental.showMoves": true,
+    "diffEditor.experimental.useTrueInlineView": true,
     "diffEditor.hideUnchangedRegions.enabled": true,
+
+    "debugpy.showPythonInlineValues": true,
 
     "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "beforeWhitespace",
@@ -134,6 +137,7 @@
     "terminal.integrated.mouseWheelZoom": true,
     "terminal.integrated.shellIntegration.history": 1000,
     "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.suggest.enabled": true
 
     "scm.experimental.showHistoryGraph": true,
 
