@@ -15,6 +15,7 @@
     "diffEditor.experimental.showMoves": true,
     "diffEditor.experimental.useTrueInlineView": true,
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.renderSideBySide": false,
 
     "debugpy.showPythonInlineValues": true,
 
