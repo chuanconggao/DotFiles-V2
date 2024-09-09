@@ -137,7 +137,7 @@
     "terminal.integrated.mouseWheelZoom": true,
     "terminal.integrated.shellIntegration.history": 1000,
     "terminal.integrated.stickyScroll.enabled": true,
-    "terminal.integrated.suggest.enabled": true
+    "terminal.integrated.suggest.enabled": true,
 
     "scm.experimental.showHistoryGraph": true,
 
