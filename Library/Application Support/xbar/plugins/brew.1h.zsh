@@ -29,3 +29,7 @@ if [[ $OUTDATED_NUM -gt 0 ]]; then
 
     echo "Upgrade... | shell=~/.xbar/plugins/scripts/brew.upgrade.zsh terminal=true"
 fi
+
+echo "---"
+
+echo "Link diff-highlight (of git)... | shell=~/.xbar/plugins/scripts/brew.diff-highlight.zsh terminal=true"
