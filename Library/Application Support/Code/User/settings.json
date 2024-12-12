@@ -69,6 +69,8 @@
     "git-graph.commitDetailsView.fileView.type": "File List",
     "git-graph.repository.fetchAndPrune": true,
 
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.statusBarItem.enabled": true,
     "git.confirmSync": false,
     "git.openRepositoryInParentFolders": "always",
     "git.pruneOnFetch": true,
@@ -90,6 +92,7 @@
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.languageServerMode": "full",
     "python.analysis.persistAllIndices": true,
     "python.analysis.typeCheckingMode": "strict",
     "python.diagnostics.sourceMapsEnabled": true,
@@ -132,6 +135,7 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.enableImages": true,
     "terminal.integrated.enableVisualBell": true,
+    "terminal.integrated.fontLigatures": true,
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.hideOnStartup": "whenEmpty",
     "terminal.integrated.lineHeight": 1.2,
@@ -139,6 +143,8 @@
     "terminal.integrated.shellIntegration.history": 1000,
     "terminal.integrated.stickyScroll.enabled": true,
     "terminal.integrated.suggest.enabled": true,
+
+    "typescript.experimental.expandableHover": true,
 
     "scm.experimental.showHistoryGraph": true,
 
