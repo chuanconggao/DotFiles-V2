@@ -117,6 +117,14 @@
 
     "redhat.telemetry.enabled": false,
 
+    "ruff.lineLength": 100,
+    "ruff.lint.ignore": [
+        "D",
+    ],
+    "ruff.lint.select": [
+        "ALL",
+    ],
+
     "search.exclude": {
         "**/__pycache__": true,
         "**/build": true,
@@ -210,6 +218,6 @@
     ],
 
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.defaultFormatter": "charliermarsh.ruff",
     },
 }
