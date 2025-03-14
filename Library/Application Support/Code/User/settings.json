@@ -89,6 +89,8 @@
 
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+    },
     "python.analysis.importFormat": "relative",
     "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
@@ -97,7 +99,7 @@
     "python.analysis.languageServerMode": "full",
     "python.analysis.persistAllIndices": true,
     "python.analysis.supportDocstringTemplate": true,
-    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.typeCheckingMode": "standard",
     "python.analysis.typeEvaluation.strictDictionaryInference": true,
     "python.analysis.typeEvaluation.strictListInference": true,
     "python.analysis.typeEvaluation.strictSetInference": true,
@@ -120,6 +122,8 @@
     "ruff.lineLength": 100,
     "ruff.lint.ignore": [
         "D",
+        // https://docs.astral.sh/ruff/rules/typing-only-standard-library-import/
+        "TC003",
     ],
     "ruff.lint.select": [
         "ALL",
