@@ -71,10 +71,30 @@ function git_prompt_precmd() {
         GIT_PROMPT=" ($RAW_GIT_PROMPT)"
     fi
 }
+
+function venv_prompt_precmd() {
+    if [[ -z $VIRTUAL_ENV ]] then
+        VENV_PROMPT=""
+    else
+        if [[ $LAST_VIRTUAL_ENV == $VIRTUAL_ENV ]] then
+            return
+        fi
+
+        LAST_VIRTUAL_ENV=$VIRTUAL_ENV
+
+        # We do not use VIRTUAL_ENV_PROMPT as:
+        # - It is not always set when VIRTUAL_ENV_DISABLE_PROMPT is set
+        # - It is fixed at creation time of venv and cannot be updated
+        VENV_PY_VERSION=$(python --version | grep -o "[0-9]+\.[0-9]+")
+        VENV_PROMPT=" (%F{yellow}py$VENV_PY_VERSION%f)"
+    fi
+}
+
 autoload -U add-zsh-hook
 add-zsh-hook precmd git_prompt_precmd
+add-zsh-hook precmd venv_prompt_precmd
 
-PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}\n└ %# '
+PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${VENV_PROMPT}\n└ %# '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS="true"
