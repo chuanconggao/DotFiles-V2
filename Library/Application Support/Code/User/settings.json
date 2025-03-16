@@ -1,4 +1,7 @@
 {
+    "autoDocstring.docstringFormat": "numpy",
+    "autoDocstring.startOnNewLine": true,
+
     "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
     "aws.experiments": {
         "jsonResourceModification": true
@@ -98,7 +101,6 @@
     "python.analysis.inlayHints.variableTypes": true,
     "python.analysis.languageServerMode": "full",
     "python.analysis.persistAllIndices": true,
-    "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
     "python.analysis.typeEvaluation.strictDictionaryInference": true,
     "python.analysis.typeEvaluation.strictListInference": true,
@@ -114,7 +116,6 @@
         "--verbose"
     ],
     "python.testing.pytestEnabled": true,
-    "python.testing.unittestEnabled": true,
     "python.REPL.sendToNativeREPL": true,
 
     "redhat.telemetry.enabled": false,
@@ -122,8 +123,14 @@
     "ruff.lineLength": 100,
     "ruff.lint.ignore": [
         "D",
+        // https://docs.astral.sh/ruff/rules/implicit-namespace-package/
+        "INP001",
+        // https://docs.astral.sh/ruff/rules/typing-only-third-party-import/
+        "TC002",
         // https://docs.astral.sh/ruff/rules/typing-only-standard-library-import/
         "TC003",
+        // https://docs.astral.sh/ruff/rules/relative-imports/
+        "TID252",
     ],
     "ruff.lint.select": [
         "ALL",
