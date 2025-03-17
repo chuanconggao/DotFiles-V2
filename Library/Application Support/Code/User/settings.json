@@ -20,7 +20,7 @@
     "diffEditor.experimental.showMoves": true,
     "diffEditor.experimental.useTrueInlineView": true,
     "diffEditor.hideUnchangedRegions.enabled": true,
-    "diffEditor.renderSideBySide": false,
+    "diffEditor.ignoreTrimWhitespace": false,
 
     "debugpy.showPythonInlineValues": true,
 
@@ -29,6 +29,7 @@
     "editor.autoClosingComments": "beforeWhitespace",
     "editor.autoClosingQuotes": "beforeWhitespace",
     "editor.experimental.asyncTokenization": true,
+    "editor.experimentalEditContextEnabled": true,
     "editor.fontFamily": "'Fira Code'",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
@@ -43,7 +44,8 @@
     ],
     "editor.stickyScroll.enabled": true,
     "editor.suggest.preview": true,
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 100,
 
     "explorer.confirmDelete": false,
@@ -120,11 +122,22 @@
 
     "redhat.telemetry.enabled": false,
 
+    "ruff.format.preview": true,
     "ruff.lineLength": 100,
     "ruff.lint.ignore": [
+        "CPY",
         "D",
+        "DOC",
         // https://docs.astral.sh/ruff/rules/implicit-namespace-package/
         "INP001",
+        // https://docs.astral.sh/ruff/rules/too-many-arguments/
+        "PLR0913",
+        // https://docs.astral.sh/ruff/rules/suspicious-subprocess-import/
+        "S404",
+        // https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
+        "S603",
+        // https://docs.astral.sh/ruff/rules/start-process-with-partial-path/
+        "S607",
         // https://docs.astral.sh/ruff/rules/typing-only-third-party-import/
         "TC002",
         // https://docs.astral.sh/ruff/rules/typing-only-standard-library-import/
@@ -132,6 +145,7 @@
         // https://docs.astral.sh/ruff/rules/relative-imports/
         "TID252",
     ],
+    "ruff.lint.preview": true,
     "ruff.lint.select": [
         "ALL",
     ],
