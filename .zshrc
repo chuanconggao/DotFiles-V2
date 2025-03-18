@@ -80,14 +80,14 @@ function venv_prompt_precmd() {
             return
         fi
 
-        LAST_VIRTUAL_ENV=$VIRTUAL_ENV
-
         # We do not use VIRTUAL_ENV_PROMPT as:
         # - It is not always set when VIRTUAL_ENV_DISABLE_PROMPT is set
         # - It is fixed at creation time of venv and cannot be updated
         VENV_PY_VERSION=$(python --version | grep -o "[0-9]+\.[0-9]+")
         VENV_PROMPT=" (%F{yellow}py$VENV_PY_VERSION%f)"
     fi
+
+    LAST_VIRTUAL_ENV=$VIRTUAL_ENV
 }
 
 autoload -U add-zsh-hook
