@@ -107,6 +107,7 @@
     "python.analysis.typeEvaluation.strictDictionaryInference": true,
     "python.analysis.typeEvaluation.strictListInference": true,
     "python.analysis.typeEvaluation.strictSetInference": true,
+    "python.analysis.userFileIndexingLimit": 1000,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "python.diagnostics.sourceMapsEnabled": true,
     "python.experiments.optInto": [
@@ -128,6 +129,8 @@
         "CPY",
         "D",
         "DOC",
+        // https://docs.astral.sh/ruff/rules/reimplemented-operator/
+        "FURB118",
         // https://docs.astral.sh/ruff/rules/implicit-namespace-package/
         "INP001",
         // https://docs.astral.sh/ruff/rules/too-many-arguments/
