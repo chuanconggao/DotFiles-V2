@@ -5,6 +5,10 @@ source ~/.zprofile
 
 brew up > /dev/null
 
+if brew upgrade --dry-run --formula > /dev/null; then
+    brew upgrade --formula > /dev/null
+fi
+
 OUTDATED=$(brew outdated --verbose --greedy)
 OUTDATED_NUM=$(echo -n "$OUTDATED" | grep -c "")
 
