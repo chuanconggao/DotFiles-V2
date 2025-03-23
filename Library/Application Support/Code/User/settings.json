@@ -129,18 +129,28 @@
         "CPY",
         "D",
         "DOC",
+        // https://docs.astral.sh/ruff/rules/commented-out-code/
+        "ERA001",
         // https://docs.astral.sh/ruff/rules/reimplemented-operator/
         "FURB118",
         // https://docs.astral.sh/ruff/rules/implicit-namespace-package/
         "INP001",
+        // https://docs.astral.sh/ruff/rules/too-many-public-methods/
+        "PLR0904",
         // https://docs.astral.sh/ruff/rules/too-many-arguments/
         "PLR0913",
+        // https://docs.astral.sh/ruff/rules/magic-value-comparison/
+        "PLR2004",
+        // https://docs.astral.sh/ruff/rules/assert/
+        "S101",
         // https://docs.astral.sh/ruff/rules/suspicious-subprocess-import/
         "S404",
         // https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
         "S603",
         // https://docs.astral.sh/ruff/rules/start-process-with-partial-path/
         "S607",
+        // https://docs.astral.sh/ruff/rules/print/
+        "T201",
         // https://docs.astral.sh/ruff/rules/typing-only-third-party-import/
         "TC002",
         // https://docs.astral.sh/ruff/rules/typing-only-standard-library-import/
@@ -166,6 +176,10 @@
 
     "shellcheck.customArgs": [
         "--shell=bash",
+    ],
+    "shellcheck.exclude": [
+        // https://www.shellcheck.net/wiki/SC1091
+        "SC1091"
     ],
     "shellcheck.ignorePatterns": {
         "**/*.zsh": false,
