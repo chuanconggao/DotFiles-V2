@@ -6,7 +6,7 @@ source ~/.zprofile
 brew up > /dev/null
 
 if brew upgrade --dry-run --formula > /dev/null; then
-    brew upgrade --formula > /dev/null
+    brew upgrade --formula >> ~/.brew_auto_upgrade.log
 fi
 
 OUTDATED=$(brew outdated --verbose --greedy)
