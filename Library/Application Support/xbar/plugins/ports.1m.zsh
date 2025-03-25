@@ -4,7 +4,6 @@ source /etc/zprofile
 source ~/.zprofile
 
 OPEN_PORTS=$(lsof +c 100 -P -iTCP -sTCP:LISTEN | tail -n +2 | awk '{print $9,$1}' | sed 's/^*://' | sort -n | uniq)
-OPEN_PORTS_NUM=$(echo -n "$OPEN_PORTS" | grep -c "")
 
 # - 631 for internet printing protocol
 # - 5000 for universal plug-and-play
