@@ -19,7 +19,7 @@ Assuming using Zsh, you need a script named `print_git_prompt` in `PATH` to prin
 - Either use our preferred library:
     1. Install `pipx` via `brew`
     2. Update `PATH` by `.zprofile` in this repo
-    3. Install `extratools-gittools` via `pipx install git+https://github.com/chuanconggao/extratools-gittools.git`
+    3. Install `extratools-gittools` via `pipx install extratools-git`
 - Or use any other script that can generate Git prompt, as long as you create a symbol link with the name `print_git_prompt`.
 
 ## Git
