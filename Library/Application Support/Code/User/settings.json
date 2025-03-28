@@ -121,6 +121,8 @@
     "python.testing.pytestEnabled": true,
     "python.REPL.sendToNativeREPL": true,
 
+    "rainbow_csv.csv_lint_detect_trailing_spaces": true,
+
     "redhat.telemetry.enabled": false,
 
     "ruff.format.preview": true,
@@ -141,6 +143,8 @@
         "PLR0913",
         // https://docs.astral.sh/ruff/rules/magic-value-comparison/
         "PLR2004",
+        // https://docs.astral.sh/ruff/rules/bad-quotes-inline-string/
+        "Q000",
         // https://docs.astral.sh/ruff/rules/assert/
         "S101",
         // https://docs.astral.sh/ruff/rules/suspicious-subprocess-import/
