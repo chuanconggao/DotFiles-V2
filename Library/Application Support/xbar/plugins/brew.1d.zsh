@@ -6,6 +6,7 @@ source ~/.zprofile
 brew up > /dev/null
 
 if brew upgrade --dry-run --formula > /dev/null; then
+    date >> ~/.brew_auto_upgrade.log
     brew upgrade --formula >> ~/.brew_auto_upgrade.log
 fi
 
