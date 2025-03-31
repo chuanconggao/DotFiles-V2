@@ -447,7 +447,7 @@
     "Red Component" : "0.4588235"
   },
   "Window Type" : 0,
-  "Icon" : 0,
+  "Icon" : 1,
   "Brighten Bold Text" : true,
   "Background Image Location" : "",
   "ASCII Anti Aliased" : true,
@@ -509,6 +509,7 @@
     "Blue Component" : "0.3254902",
     "Red Component" : "0.3333333"
   },
+  "Load Shell Integration Automatically" : true,
   "Ansi 0 Color (Light)" : {
     "Green Component" : "0",
     "Blue Component" : "0",
