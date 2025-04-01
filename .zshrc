@@ -145,4 +145,7 @@ alias mkdir="mkdir -p"
 
 alias echo="echo -e"
 
+# Enable ANSI color
+alias less="less -R"
+
 alias ql="qlmanage -p > /dev/null 2> /dev/null"
