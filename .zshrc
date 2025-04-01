@@ -90,11 +90,27 @@ function venv_prompt_precmd() {
     LAST_VIRTUAL_ENV=$VIRTUAL_ENV
 }
 
+function nvm_prompt_precmd() {
+    if [[ -z $NVM_BIN ]] then
+        NVM_PROMPT=""
+    else
+        if [[ $LAST_NVM_BIN == $NVM_BIN ]] then
+            return
+        fi
+
+        NODE_VERSION=$($NVM_BIN/node --version | grep -o "v[0-9]+" | tr -d "v")
+        NVM_PROMPT=" (%F{red}node$NODE_VERSION%f)"
+    fi
+
+    LAST_NVM_BIN=$NVM_BIN
+}
+
 autoload -U add-zsh-hook
 add-zsh-hook precmd git_prompt_precmd
 add-zsh-hook precmd venv_prompt_precmd
+add-zsh-hook precmd nvm_prompt_precmd
 
-PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${VENV_PROMPT}\n└ %# '
+PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${VENV_PROMPT}${NVM_PROMPT}\n└ %# '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS="true"
