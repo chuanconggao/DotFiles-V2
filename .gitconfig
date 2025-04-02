@@ -9,6 +9,7 @@
 	excludesfile = ~/.gitignore_global
 	fsmonitor = true
 	ignoreCase = true
+	autocrlf = input
 
 [diff]
 	tool = vscode-diff
@@ -44,9 +45,9 @@
 	cmd = code --wait --new-window $MERGED
 
 [pager]
-	diff = diff-highlight | less
-	log = diff-highlight | less
-	show = diff-highlight | less
+	diff = diff-highlight | $PAGER
+	log = diff-highlight | $PAGER
+	show = diff-highlight | $PAGER
 
 [pull]
 	rebase = true
