@@ -147,6 +147,7 @@ alias echo="echo -e"
 
 # Enable ANSI color
 alias less="less -R -M --use-color"
+export PAGER="less -R -M --use-color"
 # Avoid less interpreting `:`
 export LESSEDIT="%E --goto %g\\:%lm"
 
