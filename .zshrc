@@ -119,7 +119,7 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export DDB_LOCAL_TELEMETRY=0
 
-export EDITOR="code"
+export EDITOR="code --new-window"
 
 eval "$(direnv hook zsh)"
 eval "$(npm completion)"
@@ -146,6 +146,8 @@ alias mkdir="mkdir -p"
 alias echo="echo -e"
 
 # Enable ANSI color
-alias less="less -R"
+alias less="less -R -M --use-color"
+# Avoid less interpreting `:`
+export LESSEDIT="%E --goto %g\\:%lm"
 
 alias ql="qlmanage -p > /dev/null 2> /dev/null"
