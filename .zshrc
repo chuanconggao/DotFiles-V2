@@ -119,7 +119,7 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export DDB_LOCAL_TELEMETRY=0
 
-export EDITOR="code --new-window"
+export EDITOR="code"
 
 eval "$(direnv hook zsh)"
 eval "$(npm completion)"
