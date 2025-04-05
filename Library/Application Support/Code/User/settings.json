@@ -96,8 +96,10 @@
 
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
+    "python.analysis.cacheLSPData": true,
     "python.analysis.diagnosticSeverityOverrides": {
     },
+    "python.analysis.enableEditableInstalls": true,
     "python.analysis.importFormat": "relative",
     "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
@@ -109,6 +111,7 @@
     "python.analysis.typeEvaluation.strictDictionaryInference": true,
     "python.analysis.typeEvaluation.strictListInference": true,
     "python.analysis.typeEvaluation.strictSetInference": true,
+    "python.analysis.usePullDiagnostics": true,
     "python.analysis.userFileIndexingLimit": 1000,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "python.diagnostics.sourceMapsEnabled": true,
@@ -130,6 +133,10 @@
     "ruff.format.preview": true,
     "ruff.lineLength": 100,
     "ruff.lint.ignore": [
+        // https://docs.astral.sh/ruff/rules/any-type/
+        "ANN401",
+        // https://docs.astral.sh/ruff/rules/complex-structure/
+        "C901",
         "CPY",
         "D",
         "DOC",
@@ -145,6 +152,8 @@
         "PLR0904",
         // https://docs.astral.sh/ruff/rules/too-many-arguments/
         "PLR0913",
+        // https://docs.astral.sh/ruff/rules/too-many-positional-arguments/
+        "PLR0917",
         // https://docs.astral.sh/ruff/rules/magic-value-comparison/
         "PLR2004",
         // https://docs.astral.sh/ruff/rules/bad-quotes-inline-string/
