@@ -1,7 +1,0 @@
-# From https://github.com/direnv/direnv/wiki/Node
-nvm_use() {
-    local node_version=$1
-
-    source ~/.nvm/nvm.sh
-    nvm use $node_version
-}

@@ -122,6 +122,8 @@ export DDB_LOCAL_TELEMETRY=0
 export EDITOR="code"
 
 eval "$(direnv hook zsh)"
+eval "$(mise activate zsh)"
+
 eval "$(npm completion)"
 complete -C '/opt/homebrew/bin/aws_completer' aws
 complete -C '/opt/homebrew/bin/aws_completer' awslocal

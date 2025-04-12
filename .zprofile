@@ -12,6 +12,3 @@ PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 
 # For scripts installed by pipx
 PATH="$HOME/.local/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
