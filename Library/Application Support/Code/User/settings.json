@@ -156,6 +156,8 @@
         "PLR0917",
         // https://docs.astral.sh/ruff/rules/magic-value-comparison/
         "PLR2004",
+        // https://docs.astral.sh/ruff/rules/pytest-raises-too-broad/
+        "PT011",
         // https://docs.astral.sh/ruff/rules/bad-quotes-inline-string/
         "Q000",
         // https://docs.astral.sh/ruff/rules/assert/
@@ -174,6 +176,8 @@
         "TC003",
         // https://docs.astral.sh/ruff/rules/relative-imports/
         "TID252",
+        // https://docs.astral.sh/ruff/rules/raise-vanilla-args/
+        "TRY003",
     ],
     "ruff.lint.preview": true,
     "ruff.lint.select": [
