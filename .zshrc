@@ -2,11 +2,11 @@ autoload -U bashcompinit
 bashcompinit
 
 if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 fi
+FPATH=~/.zsh/site-functions:$FPATH
+autoload -Uz compinit
+compinit
 
 eval "$(dircolors -b)"
 autoload -U colors && colors
