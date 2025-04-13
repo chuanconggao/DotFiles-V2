@@ -24,6 +24,27 @@ function finch_status() {
 
 finch_status
 
+function localstack_status() {
+    LOCALSTACK_STATUS=$(localstack status | grep "Runtime status" | grep -o "running\|stopped")
+    if [[ -z $LOCALSTACK_STATUS ]]; then
+        LOCALSTACK_STATUS="(Unknown)"
+    fi
+
+    if [[ $LOCALSTACK_STATUS == "stopped" ]]; then
+        LOCALSTACK_STATUS="Stopped"
+        LOCALSTACK_COLOR="red"
+    elif [[ $LOCALSTACK_STATUS == "running" ]]; then
+        LOCALSTACK_STATUS="Running"
+        LOCALSTACK_COLOR="green"
+
+        RUNNING_NUM=$((RUNNING + 1))
+    else
+        LOCALSTACK_COLOR="yellow"
+    fi
+}
+
+localstack_status
+
 if [[ $RUNNING_NUM -gt 0 ]]; then
     echo ":apple.terminal.on.rectangle:: $RUNNING_NUM | color=green sfcolor=green sfsize=18"
 else
@@ -44,3 +65,16 @@ function finch_menu() {
 }
 
 finch_menu
+
+function localstack_menu() {
+    echo "LocalStack | color=$LOCALSTACK_COLOR"
+
+    echo "-- $LOCALSTACK_STATUS"
+
+    echo "-----"
+
+    echo "-- Start... | shell=~/.xbar/plugins/scripts/localstack.start.zsh terminal=true"
+    echo "-- Stop... | shell=~/.xbar/plugins/scripts/localstack.stop.zsh terminal=true"
+}
+
+localstack_menu
