@@ -45,6 +45,21 @@ function localstack_status() {
 
 localstack_status
 
+function ollama_status() {
+    OLLAMA_STATUS=$(ps -A | awk '{print $4}' | grep ollama)
+    if [[ -z $OLLAMA_STATUS ]]; then
+        OLLAMA_STATUS="Stopped"
+        OLLAMA_COLOR="red"
+    else
+        OLLAMA_STATUS="Running"
+        OLLAMA_COLOR="green"
+
+        RUNNING_NUM=$((RUNNING + 1))
+    fi
+}
+
+ollama_status
+
 if [[ $RUNNING_NUM -gt 0 ]]; then
     echo ":apple.terminal.on.rectangle:: $RUNNING_NUM | color=green sfcolor=green sfsize=18"
 else
@@ -78,3 +93,16 @@ function localstack_menu() {
 }
 
 localstack_menu
+
+function ollama_menu() {
+    echo "Ollama | color=$OLLAMA_COLOR"
+
+    echo "-- $OLLAMA_STATUS"
+
+    echo "-----"
+
+    echo "-- Start... | shell=~/.xbar/plugins/scripts/ollama.start.zsh terminal=true"
+    echo "-- Stop... | shell=~/.xbar/plugins/scripts/ollama.stop.zsh terminal=true"
+}
+
+ollama_menu
