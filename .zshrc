@@ -134,7 +134,13 @@ export AWS_CLI_AUTO_PROMPT="on-partial"
 
 export PIPENV_VENV_IN_PROJECT=1
 
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && source /opt/homebrew/etc/profile.d/autojump.sh
+# https://github.com/zsh-users/zsh/blob/master/Functions/Chpwd/cdr
+autoload -Uz cdr chpwd_recent_dirs
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-max 1000
+zstyle ':chpwd:*' recent-dirs-default yes
+zstyle ':completion:*' recent-dirs-insert always
+alias j=cdr
 
 [ -f "${HOME}/.iterm2_shell_integration.zsh" ] && source "${HOME}/.iterm2_shell_integration.zsh"
 
