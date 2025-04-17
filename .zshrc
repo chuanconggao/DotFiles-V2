@@ -14,9 +14,11 @@ zle_highlight=(default:fg=yellow)
 
 autoload -U compinit && compinit
 zmodload zsh/complist
+setopt complete_in_word
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' list-colors $LS_COLORS
 zstyle ':completion:*:*:*' menu yes select
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
 
 HISTSIZE=1000000
 SAVEHIST=1000000
