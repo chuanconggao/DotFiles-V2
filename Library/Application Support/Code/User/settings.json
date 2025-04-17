@@ -156,12 +156,16 @@
         "PLR0917",
         // https://docs.astral.sh/ruff/rules/magic-value-comparison/
         "PLR2004",
+        // https://docs.astral.sh/ruff/rules/unspecified-encoding/
+        "PLW1514",
         // https://docs.astral.sh/ruff/rules/pytest-raises-too-broad/
         "PT011",
         // https://docs.astral.sh/ruff/rules/bad-quotes-inline-string/
         "Q000",
         // https://docs.astral.sh/ruff/rules/assert/
         "S101",
+        // https://docs.astral.sh/ruff/rules/suspicious-non-cryptographic-random-usage/
+        "S311",
         // https://docs.astral.sh/ruff/rules/suspicious-subprocess-import/
         "S404",
         // https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
