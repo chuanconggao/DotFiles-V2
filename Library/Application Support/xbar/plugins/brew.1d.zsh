@@ -6,8 +6,12 @@ source ~/.zprofile
 brew up > /dev/null
 
 if brew upgrade --dry-run --formula > /dev/null; then
-    date >> ~/.brew_auto_upgrade.log
-    HOMEBREW_COLOR=1 brew upgrade --formula >> ~/.brew_auto_upgrade.log
+    {
+        date
+        HOMEBREW_COLOR=1 brew upgrade --formula
+        date
+        echo
+    } >> ~/.brew_auto_upgrade.log
 fi
 
 OUTDATED=$(brew outdated --verbose --greedy)
