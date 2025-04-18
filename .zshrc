@@ -92,27 +92,27 @@ function venv_prompt_precmd() {
     LAST_VIRTUAL_ENV=$VIRTUAL_ENV
 }
 
-function nvm_prompt_precmd() {
-    if [[ -z $NVM_BIN ]] then
-        NVM_PROMPT=""
+function mise_node_prompt_precmd() {
+    if [[ -z $MISE_NODE ]] then
+        MISE_NODE_PROMPT=""
     else
-        if [[ $LAST_NVM_BIN == $NVM_BIN ]] then
+        if [[ $LAST_MISE_NODE == $MISE_NODE ]] then
             return
         fi
 
-        NODE_VERSION=$($NVM_BIN/node --version | grep -o "v[0-9]+" | tr -d "v")
-        NVM_PROMPT=" (%F{red}node$NODE_VERSION%f)"
+        MISE_NODE_VERSION=$(node --version | grep -o "v[0-9]+" | tr -d "v")
+        MISE_NODE_PROMPT=" (%F{red}node$MISE_NODE_VERSION%f)"
     fi
 
-    LAST_NVM_BIN=$NVM_BIN
+    LAST_MISE_NODE=$MISE_NODE
 }
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd git_prompt_precmd
 add-zsh-hook precmd venv_prompt_precmd
-add-zsh-hook precmd nvm_prompt_precmd
+add-zsh-hook precmd mise_node_prompt_precmd
 
-PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${VENV_PROMPT}${NVM_PROMPT}\n└ %# '
+PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${VENV_PROMPT}${MISE_NODE_PROMPT}\n└ %# '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS="true"
