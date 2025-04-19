@@ -164,3 +164,13 @@ export LESSEDIT="%E --goto %g\\:%lm"
 alias ql="qlmanage -p > /dev/null 2> /dev/null"
 
 alias jq="jaq"
+
+export function less_modified() {
+    file=$1
+
+    file_modified_time=$(stat -c "%y" "$file")
+    # Use default date formate here
+    file_modified_date=$(date +"%b %d" -d "$file_modified_time")
+
+    less -p "$file_modified_date" "$file"
+}
