@@ -112,7 +112,7 @@ add-zsh-hook precmd git_prompt_precmd
 add-zsh-hook precmd venv_prompt_precmd
 add-zsh-hook precmd mise_node_prompt_precmd
 
-PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${VENV_PROMPT}${MISE_NODE_PROMPT}\n└ %# '
+PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${VENV_PROMPT}${MISE_NODE_PROMPT}\n└ '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS="true"
