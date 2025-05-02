@@ -170,7 +170,7 @@ export function less_modified() {
 
     file_modified_time=$(stat -c "%y" "$file")
     # Use default date formate here
-    file_modified_date=$(date +"%b %d" -d "$file_modified_time")
+    file_modified_date=$(date +"%b %_d" -d "$file_modified_time")
 
     less -p "$file_modified_date" "$file"
 }
