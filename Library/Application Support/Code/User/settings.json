@@ -31,7 +31,7 @@
     "editor.experimental.asyncTokenization": true,
     "editor.experimentalEditContextEnabled": true,
     // Maple Mono CN is used to make sure CJK characters are always double width in editor with consistent experience in terminal
-    "editor.fontFamily": "'Fira Code', 'Maple Mono CN'",
+    "editor.fontFamily": "'Maple Mono CN'",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.formatOnSaveMode": "modificationsIfAvailable",
