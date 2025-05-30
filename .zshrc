@@ -18,7 +18,10 @@ setopt complete_in_word
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' list-colors $LS_COLORS
 zstyle ':completion:*:*:*' menu yes select
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
+# Case-insensitive matching seems to have certain bug
+# For example, it cannot match `bc` against `BbCc` but can match `AaBbCc`
+# https://www.zsh.org/mla/workers/2022/msg00652.html
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+r:|=*' '+l:|=*'
 
 HISTSIZE=1000000
 SAVEHIST=1000000
