@@ -144,6 +144,8 @@
         "DOC",
         // https://docs.astral.sh/ruff/rules/commented-out-code/
         "ERA001",
+        // https://docs.astral.sh/ruff/rules/line-contains-todo/
+        "FIX002",
         // https://docs.astral.sh/ruff/rules/reimplemented-operator/
         "FURB118",
         // https://docs.astral.sh/ruff/rules/unconventional-import-alias/
@@ -180,6 +182,10 @@
         "TC002",
         // https://docs.astral.sh/ruff/rules/typing-only-standard-library-import/
         "TC003",
+        // https://docs.astral.sh/ruff/rules/missing-todo-author/
+        "TD002",
+        // https://docs.astral.sh/ruff/rules/missing-todo-link/
+        "TD003",
         // https://docs.astral.sh/ruff/rules/relative-imports/
         "TID252",
         // https://docs.astral.sh/ruff/rules/raise-vanilla-args/
