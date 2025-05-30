@@ -21,7 +21,8 @@ zstyle ':completion:*:*:*' menu yes select
 # Case-insensitive matching seems to have certain bug
 # For example, it cannot match `bc` against `BbCc` but can match `AaBbCc`
 # https://www.zsh.org/mla/workers/2022/msg00652.html
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+r:|=*' '+l:|=*'
+# Thus, we disable it right now (everywhere for consistency)
+zstyle ':completion:*' matcher-list '' 'r:|=*' '+l:|=*'
 
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -33,8 +34,8 @@ setopt AUTO_REMOVE_SLASH
 setopt EXTENDED_GLOB
 setopt GLOB_STAR_SHORT
 setopt NUMERIC_GLOB_SORT
-unsetopt CASE_GLOB
-unsetopt CASE_MATCH
+setopt CASE_GLOB
+setopt CASE_MATCH
 unsetopt LIST_TYPES
 unsetopt MARK_DIRS
 
