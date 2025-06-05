@@ -132,6 +132,18 @@
 
     "redhat.telemetry.enabled": false,
 
+    "ruff.configuration": {
+        "lint": {
+            "flake8-comprehensions": {
+                // https://docs.astral.sh/ruff/settings/#lint_flake8-comprehensions_allow-dict-calls-with-keyword-arguments
+                "allow-dict-calls-with-keyword-arguments": true,
+            },
+            "isort": {
+                // https://docs.astral.sh/ruff/settings/#lint_isort_case-sensitive
+                "case-sensitive": true,
+            },
+        },
+    },
     "ruff.format.preview": true,
     "ruff.lineLength": 100,
     "ruff.lint.ignore": [
