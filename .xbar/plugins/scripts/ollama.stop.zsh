@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-ollama ps | tail -n +2 | awk '{print $1}' | xargs ollama stop
+ollama ps | tail -n +2 | awk '{print $1}' | parallel ollama stop
 # Wait until all models are stopped
 sleep 5
 
