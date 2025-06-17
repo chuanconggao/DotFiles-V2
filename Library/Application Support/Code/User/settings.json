@@ -178,6 +178,8 @@
         "PT011",
         // https://docs.astral.sh/ruff/rules/bad-quotes-inline-string/
         "Q000",
+        // https://docs.astral.sh/ruff/rules/unused-async/
+        "RUF029",
         // https://docs.astral.sh/ruff/rules/assert/
         "S101",
         // https://docs.astral.sh/ruff/rules/suspicious-non-cryptographic-random-usage/
