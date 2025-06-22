@@ -160,6 +160,8 @@
         "FIX002",
         // https://docs.astral.sh/ruff/rules/reimplemented-operator/
         "FURB118",
+        // https://docs.astral.sh/ruff/rules/logging-f-string/
+        "G004",
         // https://docs.astral.sh/ruff/rules/unconventional-import-alias/
         "ICN001",
         // https://docs.astral.sh/ruff/rules/implicit-namespace-package/
