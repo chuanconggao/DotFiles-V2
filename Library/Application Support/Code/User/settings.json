@@ -57,6 +57,7 @@
     "files.autoSave": "onWindowChange",
     "files.autoSaveWhenNoErrors": true,
     "files.exclude": {
+        "**/*.egg-info": true,
         "**/.venv": true,
         "**/__pycache__": true,
         "**/build": true,
@@ -65,6 +66,7 @@
     },
     "files.insertFinalNewline": true,
     "files.watcherExclude": {
+        "**/*.egg-info/**": true,
         "**/.venv/**": true,
         "**/__pycache__/**": true,
         "**/build/**": true,
@@ -277,6 +279,9 @@
 
     "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.editor.empty.hint": "hidden",
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor",
+    },
     "workbench.editorLargeFileConfirmation": 128,
     "workbench.startupEditor": "none",
     "workbench.tree.enableStickyScroll": true,
