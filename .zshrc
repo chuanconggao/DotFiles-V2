@@ -78,6 +78,14 @@ function git_prompt_precmd() {
     fi
 }
 
+function aws_prompt_precmd() {
+    if [[ -z $AWS_PROFILE ]] then
+        AWS_PROMPT=""
+    else
+        AWS_PROMPT=" (%F{red}aws:$AWS_PROFILE%f)"
+    fi
+}
+
 function venv_prompt_precmd() {
     if [[ -z $VIRTUAL_ENV ]] then
         VENV_PROMPT=""
@@ -113,10 +121,11 @@ function mise_node_prompt_precmd() {
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd git_prompt_precmd
+add-zsh-hook precmd aws_prompt_precmd
 add-zsh-hook precmd venv_prompt_precmd
 add-zsh-hook precmd mise_node_prompt_precmd
 
-PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${VENV_PROMPT}${MISE_NODE_PROMPT}\n└ '
+PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${AWS_PROMPT}${VENV_PROMPT}${MISE_NODE_PROMPT}\n└ '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS="true"
