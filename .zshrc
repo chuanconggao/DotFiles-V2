@@ -4,7 +4,7 @@ bashcompinit
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 fi
-FPATH=~/.zsh/site-functions:$FPATH
+FPATH=~/.docker/completions:~/.zsh/site-functions:$FPATH
 autoload -Uz compinit
 compinit
 
