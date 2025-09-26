@@ -29,3 +29,11 @@ Remember to update `name` and `email` under `user` section.
 ## xbar Plugins
 
 Recommend using [SwiftBar](https://github.com/swiftbar/SwiftBar) which is actively updated instead [xbar](https://github.com/matryer/xbar).
+
+## VS Code
+
+Remember to enable key repeating by:
+
+``` sh
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
