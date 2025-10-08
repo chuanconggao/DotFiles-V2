@@ -274,6 +274,7 @@
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
 
+    "window.commandCenter": false,
     "window.newWindowDimensions": "inherit",
     "window.openFilesInNewWindow": "default",
     "window.openWithoutArgumentsInNewWindow": "on",
@@ -285,6 +286,7 @@
         "*.md": "vscode.markdown.preview.editor",
     },
     "workbench.editorLargeFileConfirmation": 128,
+    "workbench.layoutControl.enabled": false,
     "workbench.startupEditor": "none",
     "workbench.tree.enableStickyScroll": true,
 
