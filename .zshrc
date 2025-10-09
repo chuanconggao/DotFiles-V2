@@ -145,6 +145,9 @@ complete -C '/opt/homebrew/bin/aws_completer' awslocal
 
 export AWS_CLI_AUTO_PROMPT="on-partial"
 
+# https://docs.aws.amazon.com/cdk/v2/guide/cli-telemetry.html#telemetry-opt-out
+export CDK_DISABLE_CLI_TELEMETRY=true
+
 export PIPENV_VENV_IN_PROJECT=1
 
 # https://github.com/zsh-users/zsh/blob/master/Functions/Chpwd/cdr
