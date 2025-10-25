@@ -49,6 +49,8 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 100,
 
+    "eslint.format.enable": true,
+
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.excludeGitIgnore": true,
@@ -96,6 +98,10 @@
     "notebook.experimental.variablesView": true,
     "notebook.lineNumbers": "on",
     "notebook.stickyScroll.enabled": true,
+
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "all",
 
     "pylint.lintOnChange": true,
 
@@ -324,5 +330,8 @@
 
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 }
