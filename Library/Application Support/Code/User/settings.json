@@ -130,6 +130,8 @@
     "python.experiments.optInto": [
         "pythonTestAdapter",
     ],
+    "python.languageServer": "Default",
+    "python.pyrefly.displayTypeErrors": "force-on",
     "python.testing.pytestArgs": [
         "--color=yes",
         "--capture=no",
@@ -328,10 +330,16 @@
         "!Split sequence",
     ],
 
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
     },
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
 }
