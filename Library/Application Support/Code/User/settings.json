@@ -2,6 +2,7 @@
     "autoDocstring.docstringFormat": "numpy",
     "autoDocstring.startOnNewLine": true,
 
+    "aws.cloudformation.telemetry.enabled": false,
     "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
     "aws.experiments": {
         "jsonResourceModification": true
@@ -91,6 +92,8 @@
     "git.openRepositoryInParentFolders": "always",
     "git.pruneOnFetch": true,
 
+    "github.copilot.renameSuggestions.triggerAutomatically": false,
+
     "githubPullRequests.focusedMode": "multiDiff",
 
     "markdown.occurrencesHighlight.enabled": true,
@@ -112,6 +115,8 @@
     },
     "python.analysis.enableColorPicker": true,
     "python.analysis.enableEditableInstalls": true,
+    "python.analysis.enableTroubleshootMissingImports": true,
+    "python.analysis.generateWithTypeAnnotation": true,
     "python.analysis.importFormat": "relative",
     "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
@@ -119,7 +124,12 @@
     "python.analysis.inlayHints.variableTypes": true,
     "python.analysis.languageServerMode": "full",
     "python.analysis.persistAllIndices": true,
+    "python.analysis.showOnlyDirectDependenciesInAutoImport": true,
+    "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.typeEvaluation.deprecateTypingAliases": true,
+    "python.analysis.typeEvaluation.disableBytesTypePromotions": true,
+    "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
     "python.analysis.typeEvaluation.strictDictionaryInference": true,
     "python.analysis.typeEvaluation.strictListInference": true,
     "python.analysis.typeEvaluation.strictSetInference": true,
