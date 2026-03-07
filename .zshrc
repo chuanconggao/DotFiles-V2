@@ -128,15 +128,13 @@ add-zsh-hook precmd mise_node_prompt_precmd
 PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${AWS_PROMPT}${VENV_PROMPT}${MISE_NODE_PROMPT}\n└ '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
-export HOMEBREW_NO_ENV_HINTS="true"
-
+export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_ANALYTICS=1
 
 export DDB_LOCAL_TELEMETRY=0
 
 export EDITOR="code"
 
-eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
 
 eval "$(npm completion)"
