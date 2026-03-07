@@ -3,16 +3,12 @@
 source /etc/zprofile
 source ~/.zprofile
 
-brew up > /dev/null
-
-if brew upgrade --dry-run --formula > /dev/null; then
-    {
-        date
-        HOMEBREW_COLOR=1 brew upgrade --formula
-        date
-        echo
-    } >> ~/.brew_auto_upgrade.log
-fi
+{
+    date
+    HOMEBREW_COLOR=1 brew upgrade --formula
+    date
+    echo
+} >> ~/.brew_auto_upgrade.log
 
 OUTDATED=$(brew outdated --verbose --greedy)
 OUTDATED_NUM=$(echo -n "$OUTDATED" | grep -c "")
