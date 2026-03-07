@@ -3,16 +3,10 @@
     "autoDocstring.startOnNewLine": true,
 
     "aws.cloudformation.telemetry.enabled": false,
-    "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
     "aws.experiments": {
         "jsonResourceModification": true
     },
     "aws.telemetry": false,
-
-    "chat.commandCenter.enabled": false,
-
-    "coverage-gutters.showLineCoverage": true,
-    "coverage-gutters.showGutterCoverage": false,
 
     "debug.internalConsoleOptions": "openOnSessionStart",
     "debug.openDebug": "openOnSessionStart",
@@ -23,6 +17,7 @@
     "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
 
+    "debug.breakpointsView.presentation": "tree",
     "debugpy.showPythonInlineValues": true,
 
     "editor.accessibilitySupport": "off",
@@ -30,7 +25,6 @@
     "editor.autoClosingComments": "beforeWhitespace",
     "editor.autoClosingQuotes": "beforeWhitespace",
     "editor.experimental.asyncTokenization": true,
-    "editor.experimentalEditContextEnabled": true,
     // Maple Mono CN is used to make sure CJK characters are always double width in editor with consistent experience in terminal
     "editor.fontFamily": "'Maple Mono CN'",
     "editor.fontLigatures": true,
@@ -49,6 +43,8 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 100,
+
+    "extensions.allowOpenInModalEditor": true,
 
     "eslint.format.enable": true,
 
@@ -86,19 +82,22 @@
     "git-graph.commitDetailsView.fileView.type": "File List",
     "git-graph.repository.fetchAndPrune": true,
 
+    "git.addAICoAuthor": "chatAndAgent",
     "git.blame.editorDecoration.enabled": true,
     "git.blame.statusBarItem.enabled": true,
     "git.confirmSync": false,
     "git.openRepositoryInParentFolders": "always",
     "git.pruneOnFetch": true,
 
+    "github.copilot.nextEditSuggestions.enabled": false,
     "github.copilot.renameSuggestions.triggerAutomatically": false,
 
     "githubPullRequests.focusedMode": "multiDiff",
 
+    "js/ts.updateImportsOnFileMove.enabled": "always",
+
     "markdown.occurrencesHighlight.enabled": true,
 
-    "notebook.experimental.variablesView": true,
     "notebook.lineNumbers": "on",
     "notebook.stickyScroll.enabled": true,
 
@@ -204,6 +203,8 @@
         "Q000",
         // https://docs.astral.sh/ruff/rules/unused-async/
         "RUF029",
+        // https://docs.astral.sh/ruff/rules/non-empty-init-module/
+        "RUF067",
         // https://docs.astral.sh/ruff/rules/assert/
         "S101",
         // https://docs.astral.sh/ruff/rules/suspicious-non-cryptographic-random-usage/
@@ -274,10 +275,6 @@
     "terminal.integrated.stickyScroll.enabled": true,
     "terminal.integrated.suggest.enabled": true,
 
-    "typescript.experimental.expandableHover": true,
-
-    "scm.experimental.showHistoryGraph": true,
-
     "update.mode": "none",
 
     "vim.highlightedyank.enable": true,
@@ -300,6 +297,7 @@
 
     "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.useModal": "some",
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor",
     },
@@ -340,6 +338,9 @@
         "!Split sequence",
     ],
 
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
