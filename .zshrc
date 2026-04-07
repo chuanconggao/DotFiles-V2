@@ -119,13 +119,23 @@ function mise_node_prompt_precmd() {
     LAST_MISE_NODE=$MISE_NODE
 }
 
+function claude_prompt_precmd() {
+    if [[ -d $PWD/.claude && $PWD != $HOME ]]; then
+        # The same color Claude Code's logo uses
+        CLAUDE_PROMPT=$' (\e[38;2;204;120;92mClaude\e[0m)'
+    else
+        CLAUDE_PROMPT=""
+    fi
+}
+
 autoload -U add-zsh-hook
 add-zsh-hook precmd git_prompt_precmd
 add-zsh-hook precmd aws_prompt_precmd
 add-zsh-hook precmd venv_prompt_precmd
 add-zsh-hook precmd mise_node_prompt_precmd
+add-zsh-hook precmd claude_prompt_precmd
 
-PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${AWS_PROMPT}${VENV_PROMPT}${MISE_NODE_PROMPT}\n└ '
+PROMPT=$'┌ %F{blue}%B%~%b%f${GIT_PROMPT}${AWS_PROMPT}${VENV_PROMPT}${MISE_NODE_PROMPT}${CLAUDE_PROMPT}\n└ '
 export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
 export HOMEBREW_NO_ENV_HINTS=1
@@ -190,3 +200,8 @@ function less_modified() {
 
     less -p "$file_modified_date" "$file"
 }
+
+# Claude Code
+# https://code.claude.com/docs/en/data-usage#telemetry-services
+export DISABLE_TELEMETRY=1
+export DISABLE_ERROR_REPORTING=1
