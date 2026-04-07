@@ -44,6 +44,8 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 100,
 
+    "errorLens.fontStyleItalic": true,
+
     "extensions.allowOpenInModalEditor": true,
 
     "eslint.format.enable": true,
@@ -94,6 +96,8 @@
 
     "githubPullRequests.focusedMode": "multiDiff",
 
+    "inlineChat.enableV2": true,
+
     "js/ts.updateImportsOnFileMove.enabled": "always",
 
     "markdown.occurrencesHighlight.enabled": true,
@@ -139,7 +143,6 @@
     "python.experiments.optInto": [
         "pythonTestAdapter",
     ],
-    "python.languageServer": "Default",
     "python.pyrefly.displayTypeErrors": "force-on",
     "python.testing.pytestArgs": [
         "--color=yes",
@@ -295,6 +298,7 @@
     "window.openWithoutArgumentsInNewWindow": "on",
     "window.restoreFullscreen": true,
 
+    "workbench.colorTheme": "Dark Modern",
     "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.editor.empty.hint": "hidden",
     "workbench.editor.useModal": "some",
