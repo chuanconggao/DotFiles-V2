@@ -181,7 +181,7 @@ alias jq="jaq"
 
 alias diff="colordiff"
 
-export function less_modified() {
+function less_modified() {
     file=$1
 
     file_modified_time=$(stat -c "%y" "$file")
