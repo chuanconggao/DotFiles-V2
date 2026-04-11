@@ -262,6 +262,8 @@
         "**/*.zsh": false,
     },
 
+    "telemetry.editStats.enabled": false,
+    "telemetry.feedback.enabled": false,
     "telemetry.telemetryLevel": "off",
 
     "terminal.external.osxExec": "iTerm.app",
@@ -279,6 +281,7 @@
     "terminal.integrated.suggest.enabled": true,
 
     "update.mode": "none",
+    "update.showReleaseNotes": false,
 
     "vim.highlightedyank.enable": true,
     "vim.hlsearch": true,
