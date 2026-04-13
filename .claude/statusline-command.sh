@@ -48,18 +48,10 @@ else
     session_tokens_part=""
 fi
 
-# session name
-if [ -n "$session_name" ]; then
-    session_part="[$session_name]"
-else
-    session_part=""
-fi
-
 # --- Assemble ---
 parts=("$cwd_part")
 [ -n "$context_part" ]        && parts+=("$context_part")
 [ -n "$session_tokens_part" ] && parts+=("$session_tokens_part")
-[ -n "$session_part" ]        && parts+=("$session_part")
 
 printf '%s' "${parts[0]}"
 for part in "${parts[@]:1}"; do
