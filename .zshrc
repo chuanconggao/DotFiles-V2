@@ -202,6 +202,8 @@ function less_modified() {
 }
 
 # Claude Code
+export ENABLE_PROMPT_CACHING_1H=1
+export CLAUDE_CODE_NO_FLICKER=1
 # https://code.claude.com/docs/en/data-usage#telemetry-services
 export DISABLE_TELEMETRY=1
 export DISABLE_ERROR_REPORTING=1
