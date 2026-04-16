@@ -3,6 +3,7 @@
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
+  "outputStyle": "Explanatory",
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
