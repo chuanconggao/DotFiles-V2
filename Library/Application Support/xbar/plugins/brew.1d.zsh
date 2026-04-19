@@ -4,9 +4,9 @@ source /etc/zprofile
 source ~/.zprofile
 
 {
-    date
+    date +"%b %-d, %Y (%-I:%M %p)"
     HOMEBREW_COLOR=1 brew upgrade --formula
-    date
+    date +"%b %-d, %Y (%-I:%M %p)"
     echo
 } >> ~/.brew_auto_upgrade.log
 
@@ -23,7 +23,7 @@ fi
 
 echo "---"
 
-date
+date +"%b %-d, %Y (%-I:%M %p)"
 
 if [[ $OUTDATED_NUM -gt 0 ]]; then
     echo "---"
