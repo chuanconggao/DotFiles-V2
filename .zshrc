@@ -195,8 +195,9 @@ function less_modified() {
     file=$1
 
     file_modified_time=$(stat -c "%y" "$file")
-    # Use default date formate here
-    file_modified_date=$(date +"%b %_d" -d "$file_modified_time")
+    # Use date formate like Apr 18, 2026
+    # Note that it is different from default date format (which has time between month/day and year)
+    file_modified_date=$(date +"%b %-d, %Y" -d "$file_modified_time")
 
     less -p "$file_modified_date" "$file"
 }
