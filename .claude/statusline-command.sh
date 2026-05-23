@@ -3,6 +3,7 @@
 
 # --- Colors ---
 reset=$'\e[0m'
+bright_white=$'\e[97m'   # default color of \e[0m varies across environments (iTerm vs. Claude Code)
 cwd_color=$'\e[1;34m'    # bold blue, matches zsh prompt %F{blue}%B
 ctx_green=$'\e[32m'
 ctx_yellow=$'\e[33m'
@@ -11,7 +12,6 @@ ctx_red=$'\e[31m'
 # --- Input ---
 input=$(cat)
 cwd=$(echo "$input" | jq -r '.cwd')
-session_name=$(echo "$input" | jq -r '.session_name // empty')
 used_pct=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 context_size=$(echo "$input" | jq -r '.context_window.context_window_size // empty')
 total_cost=$(echo "$input" | jq -r '.cost.total_cost_usd // empty')
@@ -20,12 +20,22 @@ total_cost=$(echo "$input" | jq -r '.cost.total_cost_usd // empty')
 
 # cwd
 short_cwd="${cwd/#$HOME/\~}"
-cwd_part="${cwd_color}${short_cwd}${reset}"
+git_prompt=$(cd "$cwd" && print_git_prompt 2>/dev/null)
+if [ -n "$git_prompt" ]; then
+    cwd_part="${cwd_color}${short_cwd}${reset} ${bright_white}(${git_prompt}${bright_white})${reset}"
+else
+    cwd_part="${cwd_color}${short_cwd}${reset}"
+fi
 
 # context window
 if [ -n "$context_size" ]; then
     used_rounded=$(printf "%.0f" "${used_pct:-0}")
     context_k=$(( context_size / 1000 ))
+    if [ "$context_k" -ge 1000 ]; then
+        context_size_label="$(( context_k / 1000 ))M"
+    else
+        context_size_label="${context_k}K"
+    fi
     if [ "$used_rounded" -lt 60 ]; then
         ctx_color="$ctx_green"
     elif [ "$used_rounded" -lt 80 ]; then
@@ -33,7 +43,7 @@ if [ -n "$context_size" ]; then
     else
         ctx_color="$ctx_red"
     fi
-    context_part="${ctx_color}${used_rounded}% of ${context_k}k context${reset}"
+    context_part="${ctx_color}${used_rounded}% of ${context_size_label} context${reset}"
 else
     context_part=""
 fi
