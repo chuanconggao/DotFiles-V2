@@ -203,8 +203,12 @@ function less_modified() {
 }
 
 # Claude Code
-export ENABLE_PROMPT_CACHING_1H=1
+# It is expensive to use
+# export ENABLE_PROMPT_CACHING_1H=1
 export CLAUDE_CODE_NO_FLICKER=1
 # https://code.claude.com/docs/en/data-usage#telemetry-services
 export DISABLE_TELEMETRY=1
 export DISABLE_ERROR_REPORTING=1
+# No need as we already have it in status line
+# It is also not consistent with status line for some reason
+export CLAUDE_CODE_HIDE_CWD=1
