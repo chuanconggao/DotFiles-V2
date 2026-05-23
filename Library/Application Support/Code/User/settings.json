@@ -8,6 +8,8 @@
     },
     "aws.telemetry": false,
 
+    "chat.disableAIFeatures": true,
+
     "debug.internalConsoleOptions": "openOnSessionStart",
     "debug.openDebug": "openOnSessionStart",
 
@@ -47,8 +49,6 @@
     "errorLens.fontStyleItalic": true,
 
     "extensions.allowOpenInModalEditor": true,
-
-    "eslint.format.enable": true,
 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -99,6 +99,17 @@
     "inlineChat.enableV2": true,
 
     "js/ts.updateImportsOnFileMove.enabled": "always",
+
+    "json.schemaDownload.trustedDomains": {
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://schema.agentcore.aws.dev": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://www.schemastore.org/": true
+    },
 
     "markdown.occurrencesHighlight.enabled": true,
 
@@ -303,6 +314,9 @@
 
     "workbench.colorTheme": "Dark Modern",
     "workbench.commandPalette.experimental.suggestCommands": true,
+    "workbench.diffEditorAssociations": {
+        "*.md": "vscode.markdown.preview.editor",
+    },
     "workbench.editor.empty.hint": "hidden",
     "workbench.editor.useModal": "some",
     "workbench.editorAssociations": {
