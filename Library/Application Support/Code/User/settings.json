@@ -112,6 +112,7 @@
     },
 
     "markdown.occurrencesHighlight.enabled": true,
+    "markdown.preview.fontSize": 16,
 
     "notebook.lineNumbers": "on",
     "notebook.stickyScroll.enabled": true,
@@ -318,6 +319,7 @@
         "*.md": "vscode.markdown.preview.editor",
     },
     "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.showTabIndex": true,
     "workbench.editor.useModal": "some",
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor",
@@ -363,6 +365,9 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[python]": {
