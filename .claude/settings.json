@@ -3,6 +3,9 @@
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "hooks": {
     "Notification": [
       {
@@ -31,5 +34,10 @@
   },
   "extraKnownMarketplaces": {},
   "outputStyle": "Explanatory",
-  "effortLevel": "medium"
+  "effortLevel": "medium",
+  "autoCompactWindow": 500000,
+  "enableWorkflows": true,
+  "spellcheck": {
+    "enabled": true
+  }
 }
