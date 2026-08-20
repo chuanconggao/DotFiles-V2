@@ -34,6 +34,7 @@
   },
   "extraKnownMarketplaces": {},
   "outputStyle": "Concise",
+  "spinnerTipsEnabled": false,
   "effortLevel": "medium",
   "autoCompactWindow": 500000,
   "enableWorkflows": true,
