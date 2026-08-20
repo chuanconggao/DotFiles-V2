@@ -33,7 +33,7 @@
     "pyright-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {},
-  "outputStyle": "Explanatory",
+  "outputStyle": "Concise",
   "effortLevel": "medium",
   "autoCompactWindow": 500000,
   "enableWorkflows": true,
