@@ -213,3 +213,4 @@ export DISABLE_ERROR_REPORTING=1
 # It is also not consistent with status line for some reason
 export CLAUDE_CODE_HIDE_CWD=1
 export CLAUDE_CODE_ENABLE_AUTO_MODE=1
+export CLAUDE_CODE_ENABLE_TODO_TOOLS=1
