@@ -35,6 +35,7 @@
   "extraKnownMarketplaces": {},
   "outputStyle": "Concise",
   "spinnerTipsEnabled": false,
+  "keybindingFlavor": "readline",
   "effortLevel": "medium",
   "autoCompactWindow": 500000,
   "enableWorkflows": true,
