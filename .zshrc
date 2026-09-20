@@ -191,6 +191,8 @@ alias jq="jaq"
 
 alias diff="colordiff"
 
+alias pre-commit="prek"
+
 function less_modified() {
     file=$1
 
