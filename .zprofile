@@ -1,7 +1,8 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"
+PATH="/opt/homebrew/opt/uutils-diffutils/libexec/uubin:$PATH"
+PATH="/opt/homebrew/opt/uutils-findutils/libexec/uubin:$PATH"
 PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
