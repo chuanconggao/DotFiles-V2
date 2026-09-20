@@ -19,6 +19,7 @@
       }
     ]
   },
+  "enableWorkflows": true,
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
@@ -35,11 +36,10 @@
   "extraKnownMarketplaces": {},
   "outputStyle": "Concise",
   "spinnerTipsEnabled": false,
-  "keybindingFlavor": "readline",
-  "effortLevel": "medium",
-  "autoCompactWindow": 500000,
-  "enableWorkflows": true,
   "spellcheck": {
     "enabled": true
-  }
+  },
+  "effortLevel": "medium",
+  "autoCompactWindow": 500000,
+  "keybindingFlavor": "readline"
 }
