@@ -121,6 +121,9 @@
     "prettier.tabWidth": 4,
     "prettier.trailingComma": "all",
 
+    "preview.mermaid.baseUrl": "",
+    "preview.mermaid.enableTelemetry": false,
+
     "pylint.lintOnChange": true,
 
     "python.analysis.autoFormatStrings": true,
@@ -313,6 +316,8 @@
     "window.openWithoutArgumentsInNewWindow": "on",
     "window.restoreFullscreen": true,
 
+    "workbench.browser.dataStorage": "workspace",
+    "workbench.browser.searchEngine": "none",
     "workbench.colorTheme": "Dark Modern",
     "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.diffEditorAssociations": {
