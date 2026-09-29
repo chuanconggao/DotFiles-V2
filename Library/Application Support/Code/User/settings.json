@@ -295,6 +295,8 @@
     "terminal.integrated.stickyScroll.enabled": true,
     "terminal.integrated.suggest.enabled": true,
 
+    "ty.experimental.useUv": "on",
+
     "update.mode": "none",
     "update.showReleaseNotes": false,
 
